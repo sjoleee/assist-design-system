@@ -1,6 +1,7 @@
 {
   "name": "assinents",
   "description": "assist design system",
+  "sideEffects": false,
   "version": "0.0.1",
   "author": "sjoleee",
   "license": "ISC",

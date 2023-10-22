@@ -1,6 +1,7 @@
 {
   "name": "@assist/test",
   "private": true,
+  "sideEffects": false,
   "version": "0.0.1",
   "componentName": "test",
   "author": "sjoleee",

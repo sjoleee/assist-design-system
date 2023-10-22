@@ -4,6 +4,7 @@ to: packages/<%= name %>/package.json
 {
   "name": "@assist/<%= packageName %>",
   "private": true,
+  "sideEffects": false,
   "version": "0.0.1",
   "componentName": "<%= packageName %>",
   "author": "sjoleee",
