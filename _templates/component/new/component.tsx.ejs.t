@@ -5,8 +5,7 @@ type Props = {
   name?: string;
 };
 
-const <%= name %> = ({ name }: Props) => {
+export const <%= name %> = ({ name }: Props) => {
   return <div>{name}</div>;
 };
 
-export default <%= name %>;
