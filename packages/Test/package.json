@@ -1,5 +1,6 @@
 {
   "name": "@assist/test",
+  "private": true,
   "version": "0.0.1",
   "componentName": "test",
   "author": "sjoleee",

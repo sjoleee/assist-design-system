@@ -3,6 +3,7 @@ to: packages/<%= name %>/package.json
 ---
 {
   "name": "@assist/<%= packageName %>",
+  "private": true,
   "version": "0.0.1",
   "componentName": "<%= packageName %>",
   "author": "sjoleee",
