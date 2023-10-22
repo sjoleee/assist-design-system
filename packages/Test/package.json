@@ -1,7 +1,7 @@
 {
   "name": "@sjoleee/test",
   "sideEffects": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "componentName": "test",
   "author": "sjoleee",
   "license": "ISC",
