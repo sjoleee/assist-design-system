@@ -1,6 +1,5 @@
 {
-  "name": "@assist/test",
-  "private": true,
+  "name": "@sjoleee/test",
   "sideEffects": false,
   "version": "0.0.1",
   "componentName": "test",

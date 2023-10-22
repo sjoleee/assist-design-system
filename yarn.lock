@@ -22,26 +22,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@assist/test@^0.0.1, @assist/test@workspace:^, @assist/test@workspace:packages/Test":
-  version: 0.0.0-use.local
-  resolution: "@assist/test@workspace:packages/Test"
-  dependencies:
-    "@babel/core": ^7.23.2
-    "@emotion/react": ^11.11.1
-    "@types/react": ^18.2.29
-    "@types/react-dom": ^18.2.14
-    babel-loader: ^9.1.3
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    tsup: ^7.2.0
-    typescript: ^5.2.2
-  peerDependencies:
-    "@emotion/react": ^11
-    react: ^16.8.0 || ^17 || ^18
-    react-dom: ^16.8.0 || ^17 || ^18
-  languageName: unknown
-  linkType: soft
-
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.22.13":
   version: 7.22.13
   resolution: "@babel/code-frame@npm:7.22.13"
@@ -1278,6 +1258,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sjoleee/showcase@workspace:showcase/nextjs":
+  version: 0.0.0-use.local
+  resolution: "@sjoleee/showcase@workspace:showcase/nextjs"
+  dependencies:
+    "@types/node": ^20
+    "@types/react": ^18
+    "@types/react-dom": ^18
+    assinents: latest
+    next: 13.5.6
+    react: ^18
+    react-dom: ^18
+    typescript: ^5
+  languageName: unknown
+  linkType: soft
+
+"@sjoleee/test@^0.0.1, @sjoleee/test@workspace:^, @sjoleee/test@workspace:packages/Test":
+  version: 0.0.0-use.local
+  resolution: "@sjoleee/test@workspace:packages/Test"
+  dependencies:
+    "@babel/core": ^7.23.2
+    "@emotion/react": ^11.11.1
+    "@types/react": ^18.2.29
+    "@types/react-dom": ^18.2.14
+    babel-loader: ^9.1.3
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    tsup: ^7.2.0
+    typescript: ^5.2.2
+  peerDependencies:
+    "@emotion/react": ^11
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  languageName: unknown
+  linkType: soft
+
 "@swc/helpers@npm:0.5.2":
   version: 0.5.2
   resolution: "@swc/helpers@npm:0.5.2"
@@ -1938,7 +1953,7 @@ __metadata:
   version: 0.0.1
   resolution: "assinents@npm:0.0.1"
   dependencies:
-    "@assist/test": ^0.0.1
+    "@sjoleee/test": ^0.0.1
   peerDependencies:
     "@emotion/react": ^11
     react: ^16.8.0 || ^17 || ^18
@@ -1951,9 +1966,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "assinents@workspace:packages/assinents"
   dependencies:
-    "@assist/test": "workspace:^"
     "@babel/core": ^7.23.2
     "@emotion/react": ^11.11.1
+    "@sjoleee/test": "workspace:^"
     "@types/react": ^18.2.29
     "@types/react-dom": ^18.2.14
     babel-loader: ^9.1.3
@@ -7723,21 +7738,6 @@ eslint-plugin-react@latest:
   checksum: 1a2bcae50de99034fcd92ad4212d8e01eedf52c7ec7830eedcf886622804fe36884278f2be8be0ea5fde3fd1c23911643a4e0f726c8685b61871c8908af01222
   languageName: node
   linkType: hard
-
-"showcase@workspace:showcase/nextjs":
-  version: 0.0.0-use.local
-  resolution: "showcase@workspace:showcase/nextjs"
-  dependencies:
-    "@types/node": ^20
-    "@types/react": ^18
-    "@types/react-dom": ^18
-    assinents: latest
-    next: 13.5.6
-    react: ^18
-    react-dom: ^18
-    typescript: ^5
-  languageName: unknown
-  linkType: soft
 
 "side-channel@npm:^1.0.4":
   version: 1.0.4

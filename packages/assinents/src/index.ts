@@ -1,1 +1,1 @@
-export { Test } from "@assist/test";
+export { Test } from "@sjoleee/test";
