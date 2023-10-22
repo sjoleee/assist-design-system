@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -30,14 +32,10 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com  
-          yarn lerna version patch --yes --no-push --conventional-commits
+          yarn lerna version patch --yes --conventional-commits
 
       - name: Publish changed packages to npm registry
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
-          yarn lerna publish --no-private
-
-      - name: Push changes back to repository
-        run: |
-          git push origin main
+          yarn lerna publish from-package --no-private
