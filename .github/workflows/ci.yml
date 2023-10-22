@@ -1,0 +1,43 @@
+name: Bump & Publish
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: |
+          yarn install --immutable 
+          yarn lerna run build
+
+      - name: Versioning changed packages
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com  
+          yarn lerna version patch --yes --no-push --conventional-commits
+
+      - name: Publish changed packages to npm registry
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: |
+          yarn lerna publish --no-private
+
+      - name: Push changes back to repository
+        run: |
+          git push origin main
