@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/Test.tsx"],"sourcesContent":["type Props = {\n  name?: string;\n};\n\nexport const Test = ({ name }: Props) => {\n  return <div>{name}</div>;\n};\n"],"mappings":";AAKS;AADF,IAAM,OAAO,CAAC,EAAE,KAAK,MAAa;AACvC,SAAO,oBAAC,SAAK,gBAAK;AACpB;","names":[]}
