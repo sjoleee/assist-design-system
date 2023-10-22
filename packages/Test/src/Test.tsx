@@ -3,5 +3,5 @@ type Props = {
 };
 
 export const Test = ({ name }: Props) => {
-  return <div>{name} test</div>;
+  return <div>{name} test2</div>;
 };
