@@ -1265,24 +1265,12 @@ __metadata:
     "@types/node": ^20
     "@types/react": ^18
     "@types/react-dom": ^18
-    assinents: latest
     next: 13.5.6
     react: ^18
     react-dom: ^18
     typescript: ^5
   languageName: unknown
   linkType: soft
-
-"@sjoleee/test@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@sjoleee/test@npm:0.0.1"
-  peerDependencies:
-    "@emotion/react": ^11
-    react: ^16.8.0 || ^17 || ^18
-    react-dom: ^16.8.0 || ^17 || ^18
-  checksum: e380ff07dce3d775fde7052efa95c2f389fc4b101ea65a9c9c3f799852b8b69bff36277fd7e65a63a27b254b9f65696c98a6a653438d99480c49f976c02de429
-  languageName: node
-  linkType: hard
 
 "@sjoleee/test@workspace:^, @sjoleee/test@workspace:packages/Test":
   version: 0.0.0-use.local
@@ -1957,19 +1945,6 @@ __metadata:
   version: 2.0.1
   resolution: "arrify@npm:2.0.1"
   checksum: 067c4c1afd182806a82e4c1cb8acee16ab8b5284fbca1ce29408e6e91281c36bb5b612f6ddfbd40a0f7a7e0c75bf2696eb94c027f6e328d6e9c52465c98e4209
-  languageName: node
-  linkType: hard
-
-"assinents@npm:latest":
-  version: 0.0.1
-  resolution: "assinents@npm:0.0.1"
-  dependencies:
-    "@sjoleee/test": ^0.0.1
-  peerDependencies:
-    "@emotion/react": ^11
-    react: ^16.8.0 || ^17 || ^18
-    react-dom: ^16.8.0 || ^17 || ^18
-  checksum: cdacd847f81ed5355459a8c2c72bf10333508c1f99041fb9d77f69e199fbd2e5406039dc4f9354b028270fa13d8583bb2d1918e92f0c3cc1840a963aa594ca7a
   languageName: node
   linkType: hard
 
