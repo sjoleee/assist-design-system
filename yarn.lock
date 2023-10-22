@@ -1273,7 +1273,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@sjoleee/test@^0.0.1, @sjoleee/test@workspace:^, @sjoleee/test@workspace:packages/Test":
+"@sjoleee/test@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@sjoleee/test@npm:0.0.1"
+  peerDependencies:
+    "@emotion/react": ^11
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  checksum: e380ff07dce3d775fde7052efa95c2f389fc4b101ea65a9c9c3f799852b8b69bff36277fd7e65a63a27b254b9f65696c98a6a653438d99480c49f976c02de429
+  languageName: node
+  linkType: hard
+
+"@sjoleee/test@workspace:^, @sjoleee/test@workspace:packages/Test":
   version: 0.0.0-use.local
   resolution: "@sjoleee/test@workspace:packages/Test"
   dependencies:
