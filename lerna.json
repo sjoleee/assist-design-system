@@ -1,0 +1,6 @@
+{
+  "packages": ["packages/*", "showcase/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

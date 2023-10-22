@@ -27,6 +27,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "latest",
     "hygen": "^6.2.11",
+    "lerna": "^7.4.1",
     "prettier": "^3.0.3"
   }
 }
