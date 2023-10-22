@@ -1,7 +1,7 @@
 {
-  "name": "sangjo-design-system",
+  "name": "assist-design-system",
   "packageManager": "yarn@3.6.4",
-  "description": "sangjo design system",
+  "description": "assist design system",
   "version": "0.0.1",
   "main": "index.js",
   "workspaces": [

@@ -1,4 +1,4 @@
-import { Test } from "sangjonents";
+import { Test } from "assinents";
 
 export default function Home() {
   return (

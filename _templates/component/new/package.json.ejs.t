@@ -2,7 +2,7 @@
 to: packages/<%= name %>/package.json
 ---
 {
-  "name": "@sangjonents/<%= packageName %>",
+  "name": "@assist/<%= packageName %>",
   "version": "0.0.1",
   "componentName": "<%= packageName %>",
   "author": "sjoleee",

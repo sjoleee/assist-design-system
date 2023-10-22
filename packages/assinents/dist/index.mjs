@@ -1,5 +1,5 @@
 // src/index.ts
-import { Test } from "@sangjonents/test";
+import { Test } from "@assist/test";
 export {
   Test
 };

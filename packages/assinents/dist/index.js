@@ -23,7 +23,7 @@ __export(src_exports, {
   Test: () => import_test.Test
 });
 module.exports = __toCommonJS(src_exports);
-var import_test = require("@sangjonents/test");
+var import_test = require("@assist/test");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Test

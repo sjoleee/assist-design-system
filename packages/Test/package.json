@@ -1,12 +1,12 @@
 {
-  "name": "@sangjonents/test",
+  "name": "@assist/test",
   "version": "0.0.1",
   "componentName": "test",
   "author": "sjoleee",
   "license": "ISC",
   "scripts": {
     "prepack": "yarn build",
-    "build": "tsup",
+    "build": "tsup --clean",
     "dev": "yarn run build --watch"
   },
   "main": "./dist/index.js",

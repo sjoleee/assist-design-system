@@ -1,7 +1,7 @@
 {
-  "name": "sangjonents",
-  "description": "sangjo design system",
-  "version": "0.0.1-alpha",
+  "name": "assinents",
+  "description": "assist design system",
+  "version": "0.0.1",
   "author": "sjoleee",
   "license": "ISC",
   "scripts": {
@@ -36,6 +36,6 @@
     "react-dom": "^16.8.0 || ^17 || ^18"
   },
   "dependencies": {
-    "@sangjonents/test": "workspace:^"
+    "@assist/test": "workspace:^"
   }
 }
