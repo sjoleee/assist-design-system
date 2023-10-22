@@ -2,7 +2,7 @@
   "name": "assinents",
   "description": "assist design system",
   "sideEffects": false,
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "sjoleee",
   "license": "ISC",
   "scripts": {
