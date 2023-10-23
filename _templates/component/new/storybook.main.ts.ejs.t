@@ -13,7 +13,6 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
   ],
   framework: {
@@ -24,7 +23,20 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   babel: async (options) => {
-    return { ...options, rootMode: "upward" };
+    return {
+      ...options,
+      rootMode: "upward",
+      presets: [
+        ...(options.presets || []),
+        [
+          "@babel/preset-react",
+          {
+            runtime: "automatic",
+          },
+          "preset-react-jsx-transform",
+        ],
+      ],
+    };
   },
 };
 export default config;
