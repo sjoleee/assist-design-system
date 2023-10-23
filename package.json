@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "new": "hygen component new"
+    "new": "hygen component new && yarn install"
   },
   "author": "sjoleee",
   "license": "ISC",
