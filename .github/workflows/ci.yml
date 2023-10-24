@@ -32,7 +32,9 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com  
-          yarn lerna version patch --yes --conventional-commits
+          yarn lerna version patch --yes --conventional-commits --no-git-tag-version
+
+          npm version patch
 
       - name: Publish changed packages to npm registry
         env:
