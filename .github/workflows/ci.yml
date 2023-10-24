@@ -40,4 +40,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
-          yarn lerna publish from-package --yes --no-private
+          yarn lerna publish from-package --yes --no-private --no-git-tag-version
