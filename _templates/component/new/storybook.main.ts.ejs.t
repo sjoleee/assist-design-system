@@ -1,8 +1,7 @@
 ---
 to: packages/<%= name %>/.storybook/main.ts
 ---
-import type { StorybookConfig } from "@storybook/react-webpack5";
-
+import type { StorybookConfig } from "@storybook/react-vite";
 import { join, dirname } from "path";
 
 function getAbsolutePath(value: string): any {
@@ -16,27 +15,11 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
   ],
   framework: {
-    name: getAbsolutePath("@storybook/react-webpack5"),
+    name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
   docs: {
     autodocs: "tag",
-  },
-  babel: async (options) => {
-    return {
-      ...options,
-      rootMode: "upward",
-      presets: [
-        ...(options.presets || []),
-        [
-          "@babel/preset-react",
-          {
-            runtime: "automatic",
-          },
-          "preset-react-jsx-transform",
-        ],
-      ],
-    };
   },
 };
 export default config;

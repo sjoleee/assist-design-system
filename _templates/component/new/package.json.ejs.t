@@ -27,17 +27,13 @@ to: packages/<%= name %>/package.json
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
-    "@babel/preset-react": "^7.22.15",
-    "@babel/preset-typescript": "^7.23.2",
     "@emotion/react": "^11.11.1",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
     "@storybook/addon-links": "^7.5.1",
-    "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.5.1",
     "@storybook/react": "^7.5.1",
-    "@storybook/react-webpack5": "^7.5.1",
+    "@storybook/react-vite": "^7.5.1",
     "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.29",
     "@types/react-dom": "^18.2.14",
@@ -46,7 +42,8 @@ to: packages/<%= name %>/package.json
     "react-dom": "^18.2.0",
     "storybook": "^7.5.1",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
   },
   "peerDependencies": {
     "@emotion/react": "^11",
