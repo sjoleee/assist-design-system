@@ -1,11 +1,8 @@
----
-to: packages/ads/<%= name %>/package.json
----
 {
-  "name": "@sjoleee/<%= packageName %>",
+  "name": "@sjoleee/init",
   "sideEffects": false,
   "version": "0.0.1",
-  "componentName": "<%= packageName %>",
+  "componentName": "init",
   "author": "sjoleee",
   "license": "ISC",
   "scripts": {

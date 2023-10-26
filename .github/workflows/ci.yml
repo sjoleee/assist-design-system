@@ -9,7 +9,7 @@ on:
 
 jobs:
   merged:
-    if: github.event.pull_request.merged && startsWith(github.head_ref, 'release/assinents')
+    if: github.event.pull_request.merged && startsWith(github.head_ref, 'release/ads-react')
     runs-on: ubuntu-latest
 
     steps:
@@ -34,14 +34,14 @@ jobs:
         run: |
           yarn lerna publish from-package --yes --no-private --no-git-tag-version
 
-      - name: Create assinents git tag
+      - name: Create ads-react git tag
         id: tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION=`node -p "require('./packages/assignments/package.json').version"`
-          git tag assignments@$VERSION
-          git push origin assignments@$VERSION
+          VERSION=`node -p "require('./packages/ads/ads-react/package.json').version"`
+          git tag ads-react@$VERSION
+          git push origin ads-react@$VERSION
           echo "::set-output name=version::$VERSION"
 
       - name: Create GitHub release
@@ -49,7 +49,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: assinents@${{ steps.tag.outputs.version }}
-          release_name: Release assinents@${{ steps.tag.outputs.version }}
+          tag_name: ads-react@${{ steps.tag.outputs.version }}
+          release_name: Release ads-react@${{ steps.tag.outputs.version }}
           draft: false
           prerelease: false

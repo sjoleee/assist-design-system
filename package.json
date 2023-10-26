@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "workspaces": [
-    "packages/*",
+    "packages/*/*",
     "showcase/*"
   ],
   "scripts": {

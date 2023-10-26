@@ -1,5 +1,5 @@
 ---
-to: packages/<%= name %>/src/<%= name %>.tsx
+to: packages/ads/<%= name %>/src/<%= name %>.tsx
 ---
 type Props = {
   name?: string;

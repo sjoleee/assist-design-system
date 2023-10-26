@@ -1,5 +1,5 @@
 ---
-to: packages/<%= name %>/.storybook/preview.ts
+to: packages/ads/<%= name %>/.storybook/preview.ts
 ---
 import type { Preview } from "@storybook/react";
 

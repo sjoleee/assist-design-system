@@ -1,1 +1,3 @@
-# sangjonents
+# assist-design-system
+
+@sjoleee @Seojunhwan

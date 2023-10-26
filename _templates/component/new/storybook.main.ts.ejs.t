@@ -1,5 +1,5 @@
 ---
-to: packages/<%= name %>/.storybook/main.ts
+to: packages/ads/<%= name %>/.storybook/main.ts
 ---
 import type { StorybookConfig } from "@storybook/react-vite";
 import { join, dirname } from "path";

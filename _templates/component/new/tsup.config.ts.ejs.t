@@ -1,5 +1,5 @@
 ---
-to: packages/<%= name %>/tsup.config.ts
+to: packages/ads/<%= name %>/tsup.config.ts
 ---
 import { defineConfig } from "tsup";
 
