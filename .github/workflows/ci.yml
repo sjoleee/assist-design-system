@@ -1,4 +1,4 @@
-name: Bump & Publish
+name: Publish & Release
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   merged:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged && startsWith(github.head_ref, 'release/assinents')
     runs-on: ubuntu-latest
 
     steps:
@@ -28,16 +28,28 @@ jobs:
           yarn install --immutable 
           yarn lerna run build
 
-      - name: Versioning changed packages
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com  
-          yarn lerna version patch --yes --conventional-commits --no-git-tag-version
-
-          npm version patch
-
       - name: Publish changed packages to npm registry
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
           yarn lerna publish from-package --yes --no-private --no-git-tag-version
+
+      - name: Create assinents git tag
+        id: tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=`node -p "require('./packages/assignments/package.json').version"`
+          git tag assignments@$VERSION
+          git push origin assignments@$VERSION
+          echo "::set-output name=version::$VERSION"
+
+      - name: Create GitHub release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: assinents@${{ steps.tag.outputs.version }}
+          release_name: Release assinents@${{ steps.tag.outputs.version }}
+          draft: false
+          prerelease: false
