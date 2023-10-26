@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "new": "hygen component new && yarn"
+    "new": "hygen component new && yarn",
+    "version": "yarn lerna version --conventional-commits --no-git-tag-version",
+    "version-root": "npm version"
   },
   "author": "sjoleee",
   "license": "ISC",
