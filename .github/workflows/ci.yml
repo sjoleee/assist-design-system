@@ -1,4 +1,4 @@
-name: Publish & Release
+name: Publish
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   merged:
-    if: github.event.pull_request.merged && startsWith(github.head_ref, 'release/ads-react')
+    if: github.event.pull_request.merged && startsWith(github.head_ref, 'release')
     runs-on: ubuntu-latest
 
     steps:
@@ -32,24 +32,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
-          yarn lerna publish from-package --yes --no-private --no-git-tag-version
-
-      - name: Create ads-react git tag
-        id: tag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          VERSION=`node -p "require('./packages/ads/ads-react/package.json').version"`
-          git tag ads-react@$VERSION
-          git push origin ads-react@$VERSION
-          echo "::set-output name=version::$VERSION"
-
-      - name: Create GitHub release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ads-react@${{ steps.tag.outputs.version }}
-          release_name: Release ads-react@${{ steps.tag.outputs.version }}
-          draft: false
-          prerelease: false
+          yarn lerna publish from-package --yes --no-private
