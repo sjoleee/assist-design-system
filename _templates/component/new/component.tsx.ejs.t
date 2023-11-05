@@ -1,7 +1,7 @@
 ---
 to: packages/ads/<%= name %>/src/<%= name %>.tsx
 ---
-type Props = {
+interface Props {
   name?: string;
 };
 

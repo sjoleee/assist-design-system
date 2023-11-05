@@ -1,4 +1,5 @@
-const toCamelCase = (str) => str.charAt(0).toLowerCase() + str.slice(1);
+const pascalToKebabCase = (str) =>
+  str.replace(/\.?([A-Z]+)/g, (x, y) => "-" + y.toLowerCase()).replace(/^-/, "");
 
 module.exports = {
   prompt: ({ prompter, args }) =>
@@ -13,7 +14,7 @@ module.exports = {
 
         return {
           name,
-          packageName: toCamelCase(name),
+          packageName: pascalToKebabCase(name),
           args,
         };
       }),
