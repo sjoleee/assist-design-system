@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react", "import", "@emotion"],
+  plugins: ["@typescript-eslint", "react", "import"],
   rules: {
     "prefer-const": "warn",
     "react/react-in-jsx-scope": "off",
