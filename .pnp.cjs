@@ -24,6 +24,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/ads/ads-react"\
       },\
       {\
+        "name": "@sjoleee/cn",\
+        "reference": "workspace:packages/utils/cn"\
+      },\
+      {\
         "name": "next",\
         "reference": "workspace:showcase/next"\
       }\
@@ -31,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@sjoleee/cn", ["workspace:packages/utils/cn"]],\
       ["@sjoleee/tailwind-test-component", ["workspace:packages/ads/TailwindTestComponent"]],\
       ["ads-react", ["workspace:packages/ads/ads-react"]],\
       ["assist-design-system", ["workspace:."]],\
@@ -4917,6 +4922,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@sjoleee/cn", [\
+        ["workspace:packages/utils/cn", {\
+          "packageLocation": "./packages/utils/cn/",\
+          "packageDependencies": [\
+            ["@sjoleee/cn", "workspace:packages/utils/cn"],\
+            ["@types/react", "npm:18.2.37"],\
+            ["@types/react-dom", "npm:18.2.15"],\
+            ["clsx", "npm:2.0.0"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:3866c8bbdcd730c8304ab6c1090ba5566e477ce1180ff4e0075a1c65bb0f86420043d9dd8db3e24e51d0f77693eb8e0bafd4783f98d3f079d81497438d2871cc#npm:18.2.0"],\
+            ["tailwind-merge", "npm:2.0.0"],\
+            ["tsup", "virtual:3416cfe033bd7167cf2314bc2d8b7e5aa1d1cb6bfd4be98ab0645903847f354dca2e0cd4c43ba5317f5556eb9a6893d8b8ac795d5f8e67ee70c5b42973e8d5f8#npm:7.2.0"],\
+            ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@sjoleee/tailwind-test-component", [\
         ["workspace:packages/ads/TailwindTestComponent", {\
           "packageLocation": "./packages/ads/TailwindTestComponent/",\
@@ -8573,6 +8595,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-plain-object", "npm:2.0.4"],\
             ["kind-of", "npm:6.0.3"],\
             ["shallow-clone", "npm:3.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["clsx", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/clsx-npm-2.0.0-afafbbe44a-a2cfb2351b.zip/node_modules/clsx/",\
+          "packageDependencies": [\
+            ["clsx", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17051,6 +17082,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["synckit", "npm:0.8.5"],\
             ["@pkgr/utils", "npm:2.4.2"],\
             ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tailwind-merge", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/tailwind-merge-npm-2.0.0-e6825d66c1-f6ed8086c2.zip/node_modules/tailwind-merge/",\
+          "packageDependencies": [\
+            ["tailwind-merge", "npm:2.0.0"],\
+            ["@babel/runtime", "npm:7.23.2"]\
           ],\
           "linkType": "HARD"\
         }]\
