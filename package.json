@@ -12,7 +12,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "new": "hygen component new && yarn",
     "version": "yarn lerna version --conventional-commits --no-git-tag-version",
-    "version-root": "npm version"
+    "version-root": "npm version",
+    "lint": "eslint .",
+    "prettier": "prettier --check **/*.{ts,tsx}",
+    "prettier-fix": "prettier --write **/*.{ts,tsx}"
   },
   "author": "sjoleee",
   "license": "ISC",
