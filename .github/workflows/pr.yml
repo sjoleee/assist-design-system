@@ -25,7 +25,7 @@ jobs:
         id: check_cache
         uses: actions/cache@v3
         with:
-          path: .yarn/cache
+          path: .yarn/unplugged
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
@@ -48,7 +48,7 @@ jobs:
       - name: Check cache
         uses: actions/cache@v3
         with:
-          path: .yarn/cache
+          path: .yarn/unplugged
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Check lint
@@ -73,7 +73,7 @@ jobs:
       - name: Check cache
         uses: actions/cache@v3
         with:
-          path: .yarn/cache
+          path: .yarn/unplugged
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Lerna build
