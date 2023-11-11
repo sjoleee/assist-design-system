@@ -27,7 +27,6 @@ to: packages/ads/<%= name %>/package.json
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@emotion/react": "^11.11.1",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
     "@storybook/addon-links": "^7.5.1",
@@ -43,10 +42,15 @@ to: packages/ads/<%= name %>/package.json
     "storybook": "^7.5.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "vite": "^4.5.0"
+    "vite": "^4.5.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   },
   "peerDependencies": {
-    "@emotion/react": "^11",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3",
     "react": "^16.8.0 || ^17 || ^18",
     "react-dom": "^16.8.0 || ^17 || ^18"
   }
