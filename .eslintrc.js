@@ -36,5 +36,10 @@ module.exports = {
   },
   settings: {
     react: { version: "detect" },
+    "import/resolver": {
+      node: {
+        paths: [".yarn/cache", ".pnp.js"],
+      },
+    },
   },
 };
