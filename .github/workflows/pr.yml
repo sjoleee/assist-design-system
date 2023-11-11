@@ -21,7 +21,15 @@ jobs:
         with:
           node-version: "18.x"
 
+      - name: Check cache
+        id: check_cache
+        uses: actions/cache@v3
+        with:
+          path: .yarn/unplugged
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install dependencies
+        if: steps.check_cache.outputs.cache-hit == false
         run: yarn install --immutable
 
   lint:
