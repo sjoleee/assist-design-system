@@ -1456,7 +1456,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.23.1, @babel/runtime@npm:^7.8.4":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
   dependencies:
@@ -3198,11 +3198,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent":
+"@sjoleee/cn@workspace:^, @sjoleee/cn@workspace:packages/utils/cn":
+  version: 0.0.0-use.local
+  resolution: "@sjoleee/cn@workspace:packages/utils/cn"
+  dependencies:
+    clsx: ^2.0.0
+    tailwind-merge: ^2.0.0
+    tsup: ^7.2.0
+    typescript: ^5.2.2
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  languageName: unknown
+  linkType: soft
+
+"@sjoleee/tailwind-test-component@workspace:^, @sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent":
   version: 0.0.0-use.local
   resolution: "@sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent"
   dependencies:
     "@babel/core": ^7.23.2
+    "@sjoleee/cn": "workspace:^"
     "@storybook/addon-essentials": ^7.5.1
     "@storybook/addon-interactions": ^7.5.1
     "@storybook/addon-links": ^7.5.1
@@ -6075,6 +6090,13 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: d06418b7335897209e77bdd430d04f882189582e67bd1f75a04565f3f07f5b3f119a9d670c943b6697d0afb100f03b866b3b8a1f91d4d02d72c4ecf2bb64b5dd
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "clsx@npm:2.0.0"
+  checksum: a2cfb2351b254611acf92faa0daf15220f4cd648bdf96ce369d729813b85336993871a4bf6978ddea2b81b5a130478339c20d9d0b5c6fc287e5147f0c059276e
   languageName: node
   linkType: hard
 
@@ -10769,6 +10791,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next@workspace:showcase/next"
   dependencies:
+    "@sjoleee/tailwind-test-component": "workspace:^"
     "@types/node": ^20
     "@types/react": ^18
     "@types/react-dom": ^18
@@ -13666,6 +13689,15 @@ __metadata:
     "@pkgr/utils": ^2.3.1
     tslib: ^2.5.0
   checksum: 8a9560e5d8f3d94dc3cf5f7b9c83490ffa30d320093560a37b88f59483040771fd1750e76b9939abfbb1b5a23fd6dfbae77f6b338abffe7cae7329cd9b9bb86b
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "tailwind-merge@npm:2.0.0"
+  dependencies:
+    "@babel/runtime": ^7.23.1
+  checksum: f6ed8086c2378c26fb9a8c6d1dace2252ebb1d9858c868968e87be1c0248980b436d07cfdb7ab9368a22508705958b3c24330cd6d8c7801df42f57c080cc2fb2
   languageName: node
   linkType: hard
 
