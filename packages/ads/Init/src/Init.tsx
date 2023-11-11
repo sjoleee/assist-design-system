@@ -5,4 +5,3 @@ type Props = {
 export const Init = ({ name }: Props) => {
   return <div>{name}</div>;
 };
-
