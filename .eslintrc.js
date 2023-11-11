@@ -21,6 +21,8 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "react", "import"],
   rules: {
+    "import/no-unresolved": "off",
+
     "prefer-const": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-explicit-any": "warn",
