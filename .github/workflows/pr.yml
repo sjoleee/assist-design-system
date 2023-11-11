@@ -1,0 +1,42 @@
+name: Open & Merge PR
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+  lint:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check lint
+        run: yarn lint
+
+      - name: Check prettier
+        run: yarn prettier
+
+  build:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lerna build
+        run: yarn lerna run build
