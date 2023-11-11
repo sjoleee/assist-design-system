@@ -51,6 +51,9 @@ jobs:
           path: .yarn/unplugged
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
+      - name: Prepare workspaces
+        run: yarn workspaces focus --all
+
       - name: Check lint
         run: yarn lint
 
