@@ -3198,7 +3198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sjoleee/cn@workspace:packages/utils/cn":
+"@sjoleee/cn@workspace:^, @sjoleee/cn@workspace:packages/utils/cn":
   version: 0.0.0-use.local
   resolution: "@sjoleee/cn@workspace:packages/utils/cn"
   dependencies:
@@ -3216,11 +3216,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent":
+"@sjoleee/tailwind-test-component@workspace:^, @sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent":
   version: 0.0.0-use.local
   resolution: "@sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent"
   dependencies:
     "@babel/core": ^7.23.2
+    "@sjoleee/cn": "workspace:^"
     "@storybook/addon-essentials": ^7.5.1
     "@storybook/addon-interactions": ^7.5.1
     "@storybook/addon-links": ^7.5.1
@@ -10794,6 +10795,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next@workspace:showcase/next"
   dependencies:
+    "@sjoleee/tailwind-test-component": "workspace:^"
     "@types/node": ^20
     "@types/react": ^18
     "@types/react-dom": ^18
