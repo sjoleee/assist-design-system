@@ -21,13 +21,36 @@ jobs:
         with:
           node-version: "18.x"
 
+      - name: Check cache
+        id: check_cache
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install dependencies
+        if: steps.check_cache.outputs.cache-hit == false
         run: yarn install --immutable
 
   lint:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Check cache
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
       - name: Check lint
         run: yarn lint
 
@@ -35,8 +58,23 @@ jobs:
         run: yarn prettier
 
   build:
-    needs: lint
+    needs: setup
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Check cache
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
       - name: Lerna build
         run: yarn lerna run build
