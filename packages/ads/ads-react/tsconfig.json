@@ -3,8 +3,7 @@
   "compilerOptions": {
     "isolatedModules": true,
     "declaration": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }

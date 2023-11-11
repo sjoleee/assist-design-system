@@ -7,7 +7,6 @@ to: packages/ads/<%= name %>/tsconfig.json
     "isolatedModules": true,
     "declaration": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"]
 }
