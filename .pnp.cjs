@@ -28,6 +28,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/utils/cn"\
       },\
       {\
+        "name": "@sjoleee/debounce",\
+        "reference": "workspace:packages/utils/debounce"\
+      },\
+      {\
         "name": "next",\
         "reference": "workspace:showcase/next"\
       }\
@@ -36,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
       ["@sjoleee/cn", ["virtual:3866c8bbdcd730c8304ab6c1090ba5566e477ce1180ff4e0075a1c65bb0f86420043d9dd8db3e24e51d0f77693eb8e0bafd4783f98d3f079d81497438d2871cc#workspace:packages/utils/cn", "workspace:packages/utils/cn"]],\
+      ["@sjoleee/debounce", ["workspace:packages/utils/debounce"]],\
       ["@sjoleee/tailwind-test-component", ["virtual:6c18043bb5bd9323172eec4c745be4c85004d0f99fc8da01d2ed41872e1fb3b773a8a8817d05523bca4d4dfa85e6fb35f762adc6fc31328225dd2bc1c9bbd5ed#workspace:packages/ads/TailwindTestComponent", "workspace:packages/ads/TailwindTestComponent"]],\
       ["ads-react", ["workspace:packages/ads/ads-react"]],\
       ["assist-design-system", ["workspace:."]],\
@@ -4950,6 +4955,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sjoleee/cn", "workspace:packages/utils/cn"],\
             ["clsx", "npm:2.0.0"],\
             ["tailwind-merge", "npm:2.0.0"],\
+            ["tsup", "virtual:24f3bf09eecf50a80c03102466d93a21bcbca23b74c17cfe4611f8d5c328af6074cb30ea18497ca24cf3b3e8a0f87f6407ab2001b232bb034e0e9b06a0883dca#npm:7.2.0"],\
+            ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@sjoleee/debounce", [\
+        ["workspace:packages/utils/debounce", {\
+          "packageLocation": "./packages/utils/debounce/",\
+          "packageDependencies": [\
+            ["@sjoleee/debounce", "workspace:packages/utils/debounce"],\
+            ["@types/react", "npm:18.2.37"],\
+            ["@types/react-dom", "npm:18.2.15"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:3866c8bbdcd730c8304ab6c1090ba5566e477ce1180ff4e0075a1c65bb0f86420043d9dd8db3e24e51d0f77693eb8e0bafd4783f98d3f079d81497438d2871cc#npm:18.2.0"],\
             ["tsup", "virtual:24f3bf09eecf50a80c03102466d93a21bcbca23b74c17cfe4611f8d5c328af6074cb30ea18497ca24cf3b3e8a0f87f6407ab2001b232bb034e0e9b06a0883dca#npm:7.2.0"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
           ],\
