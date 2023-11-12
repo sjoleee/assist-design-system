@@ -3212,6 +3212,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@sjoleee/debounce@workspace:packages/utils/debounce":
+  version: 0.0.0-use.local
+  resolution: "@sjoleee/debounce@workspace:packages/utils/debounce"
+  dependencies:
+    "@types/react": ^18.2.29
+    "@types/react-dom": ^18.2.14
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    tsup: ^7.2.0
+    typescript: ^5.2.2
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  languageName: unknown
+  linkType: soft
+
 "@sjoleee/tailwind-test-component@workspace:^, @sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent":
   version: 0.0.0-use.local
   resolution: "@sjoleee/tailwind-test-component@workspace:packages/ads/TailwindTestComponent"
