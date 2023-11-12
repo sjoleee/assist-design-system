@@ -5,6 +5,7 @@ import { TailwindTestComponent } from "../src";
 
 const meta: Meta<typeof TailwindTestComponent> = {
   component: TailwindTestComponent,
+  title: "TailwindTestComponent/TailwindTestComponent",
 };
 
 export default meta;
