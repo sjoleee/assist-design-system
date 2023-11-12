@@ -9,7 +9,8 @@
     "prepack": "yarn build",
     "build": "tsup",
     "dev": "yarn run build --watch",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
